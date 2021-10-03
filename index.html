@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+
+  <!-- 2 -->
+  <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+
+  <link rel="stylesheet" href="https://cdn.knightlab.com/libs/storymapjs/latest/css/storymap.css">
+  <script type="text/javascript" src="https://cdn.knightlab.com/libs/storymapjs/latest/js/storymap-min.js"></script>
+
+</head>
+
+<body>
+  <div id='timeline-embed' style="width: 100%; height: 100vh"></div>
+
+  <script type="text/javascript">
+    // The TL.Timeline constructor takes at least two arguments:
+    // the id of the Timeline container (no '#'), and
+    // the URL to your JSON data file or Google spreadsheet.
+    // the id must refer to an element "above" this code,
+    // and the element must have CSS styling to give it width and height
+    // optionally, a third argument with configuration options can be passed.
+    // See below for more about options.
+    var timeline_json = {
+      "title": {
+        "media": {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Shahab_al-Din_Suhrawardi.jpg",
+          // "caption": "Temsili Resim",
+          "credit": "Wikipedia/<a href='https://tr.wikipedia.org/wiki/%C5%9Eihabeddin_S%C3%BChreverd%C3%AE'>Şihabeddin Sühreverdi</a>"
+        },
+        "text": {
+          "headline": "Şİhabeddİn Sühreverdİ<br/> 1145 - 1191",
+          "text": "<p>İran'lı filozof ve İşrak akımının kurucusu.</p>",
+          // "text": "<img src='https://cdn.knightlab.com/libs/orangeline/latest/assets/logo-knightlab-stacked-dark-small.png'>"
+          // "text": '<div id="mapdiv" style="width: 100px; height: 100px;"></div>'
+        }
+      },
+      "events": [
+        {
+          "media": {
+            "url": "https://bilimveutopya.com.tr/sites/default/files/yazi-makale-gorselleri/2020/Nisan/ortacagseyyahh.jpg",
+            "caption": "Houston's mother and Gospel singer, Cissy Houston (left) and cousin Dionne Warwick.",
+            "credit": "Cissy Houston photo:<a href='http://www.flickr.com/photos/11447043@N00/418180903/'>Tom Marcello</a><br/><a href='http://commons.wikimedia.org/wiki/File%3ADionne_Warwick_television_special_1969.JPG'>Dionne Warwick: CBS Television via Wikimedia Commons</a>"
+          },
+          "start_date": {
+            "year": "1200"
+          },
+          "text": {
+            "headline": "Orta Çağ Dönemi",
+            "text": "<p>Born in New Jersey on August 9th, 1963, Houston grew up surrounded by the music business. Her mother is gospel singer Cissy Houston and her cousins are Dee Dee and Dionne Warwick.</p>"
+          }
+        },
+        {
+          "media": {
+            "url": "https://youtu.be/fSrO91XO1Ck",
+            "caption": "",
+            "credit": "<a href=\"http://unidiscmusic.com\">Unidisc Music</a>"
+          },
+          "start_date": {
+            "year": "980"
+          },
+          "text": {
+            "headline": "İbn-i Sina (Avicenna) <small> 980-1037 <small>",
+            "text": "Nesne ışın kuramcısı olarak İbn-i Sina, Razi ve Farabi'nin düşüncelerini temellendirerek."
+          }
+        },
+        {
+          "media": {
+            "url": "https://youtu.be/_gvJCCZzmro",
+            "caption": "A young poised Whitney Houston in an interview with EbonyJet.",
+            "credit": "EbonyJet"
+          },
+          "start_date": {
+            "year": "1978"
+          },
+          "text": {
+            "headline": "İbn-i Sina",
+            "text": "As a teen Houston's credits include background vocals for Jermaine Jackson, Lou Rawls and the Neville Brothers. She also sang on Chaka Khan's, 'I'm Every Woman,' a song which she later remade for the <i>Bodyguard</i> soundtrack which is the biggest selling soundtrack of all time. It sold over 42 million copies worldwide."
+          }
+        }
+      ]
+    };
+    window.timeline = new TL.Timeline('timeline-embed', timeline_json, { timenav_height_percentage: 20, font:"georgia-helvetica", debug: true });
+    // window.timeline = new TL.Timeline('timeline-embed', timeline_json);
+    // timeline = new TL.Timeline('timeline-embed', 'https://docs.google.com/spreadsheets/d/1cWqQBZCkX9GpzFtxCWHoqFXCHg-ylTVUWlnrdYMzKUI/pubhtml');
+
+    // certain settings must be passed within a separate options object
+    // var storymap_options = {};
+
+    // var storymap = new KLStoryMap.StoryMap('mapdiv', {}, storymap_options);
+  </script>
+</body>
+
+</html>
