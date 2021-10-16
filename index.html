@@ -27,76 +27,18 @@
   <div id='timeline-embed' style="width: 100%; height: 100vh"></div>
 
   <script type="text/javascript">
-    var timeline_json = {
-      "title": {
-        "media": {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Shahab_al-Din_Suhrawardi.jpg",
-          // "caption": "Temsili Resim",
-          "credit": "Wikipedia/<a href='https://tr.wikipedia.org/wiki/%C5%9Eihabeddin_S%C3%BChreverd%C3%AE'>Şihabeddin Sühreverdi</a>"
-        },
-        "text": {
-          "headline": "Şİhabeddİn Sühreverdİ<br/> 1145 - 1191",
-          "text": "<p>İran'lı filozof ve İşrak akımının kurucusu.</p>",
-          // "text": "<img src='https://cdn.knightlab.com/libs/orangeline/latest/assets/logo-knightlab-stacked-dark-small.png'>"
-          // "text": '<div id="mapdiv" style="width: 100px; height: 100px;"></div>'
-        }
-      },
-      "events": [
-        {
-          "unique_id": "ccc",
-          "media": {
-            "url": "https://youtu.be/fSrO91XO1Ck",
-            "caption": "",
-            "credit": "<a href=\"http://unidiscmusic.com\">Unidisc Music</a>"
-          },
-          "start_date": {
-            "year": "980"
-          },
-          "end_date": {
-            "year": "1037"
-          },
-          "text": {
-            "headline": "İbn-i Sina (Avicenna)",
-            "text": `
-              Optik alanında bir nesne ışın kuramcısı olarak İbn-i Sina;
-              Razi ve Farabi'nin düşüncelerini temellendirerek, öne sürdüğü anti-tezlerle
-              lerle Eukleidesçi anlayışı çürütmeye çalışmış, bir yandan Aristoteles'in 
-              nesne ışın kuramını desteklemiştir."
-            `
-          }
-        },
-        {
-          "unique_id": "ibn-i-sina",
-          "media": {
-            "url": "https://youtu.be/fSrO91XO1Ck",
-            "caption": "",
-            "credit": "<a href=\"http://unidiscmusic.com\">Unidisc Music</a>"
-          },
-          "start_date": {
-            "year": "980"
-          },
-          "end_date": {
-            "year": "1037"
-          },
-          "text": {
-            "headline": "İbn-i Sina (Avicenna)",
-            "text": `
-              Optik alanında bir nesne ışın kuramcısı olarak İbn-i Sina;
-              Razi ve Farabi'nin düşüncelerini temellendirerek, öne sürdüğü anti-tezlerle
-              lerle Eukleidesçi anlayışı çürütmeye çalışmış, bir yandan Aristoteles'in 
-              nesne ışın kuramını desteklemiştir."
-            `
-          }
-        }
-      ]
-    };
-    window.timeline = new TL.Timeline('timeline-embed', timeline_json, {
-      timenav_height_percentage: 20, 
-      font: "georgia-helvetica", 
-      debug: true,
-      language: "tr",
-      start_at_slide: 2
-    });
+    
+
+    $.getJSON("json/timeline.json", (data)=>{
+      window.timeline = new TL.Timeline('timeline-embed', data, {
+        timenav_height_percentage: 20, 
+        font: "georgia-helvetica", 
+        debug: true,
+        language: "tr",
+        start_at_slide: 1
+      });
+
+    })
 
 
     // setTimeout(() => {
