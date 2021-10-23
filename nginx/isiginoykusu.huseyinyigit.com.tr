@@ -1,7 +1,7 @@
   
 server {
 
-    root /root/sites/huseyinyigit.com.tr/isiginoykusu.huseyinyigit.com.tr;
+    root /root/sites/huseyinyigit.com.tr/isiginoykusu;
     index index.html;
     server_name isiginoykusu.huseyinyigit.com.tr;
     location / {
